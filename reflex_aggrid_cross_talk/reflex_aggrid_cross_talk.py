@@ -25,7 +25,7 @@ def index() -> rx.Component:
             rx.heading("Testcase for AgGrid Crosstalk", size="9"),
             rx.select(
                 ["Grid1", "Grid2"],
-                default_value=State.current_grid,
+                value=State.current_grid,
                 on_change=State.change_current_grid,
             ),
             rx.match(
@@ -64,7 +64,7 @@ def index() -> rx.Component:
                                 {"Column 1": "B2:1", "Column 2": "2:2"},
                                 {"Column 1": "B3:1", "Column 2": "3:2"},
                             ],
-                            on_cell_clicked=State.grid2_cell_clicked(),
+                            # on_cell_clicked=State.grid2_cell_clicked(),
                         ),
                     ),
                 ),
